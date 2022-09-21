@@ -5,13 +5,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.projectem12.ControladorLogin">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.projectem12.ControladorLogin">
    <children>
-      <TextField fx:id="usuariLogin" layoutX="566.0" layoutY="299.0" promptText="Nom D'usuari" />
-      <TextField fx:id="contrasenyaLogin" layoutX="580.0" layoutY="360.0" promptText="Contrasenya" />
-      <Button fx:id="botoLogin" layoutX="623.0" layoutY="450.0" mnemonicParsing="false" onAction="#login" text="Inciar Sessio" />
-      <Label layoutX="596.0" layoutY="224.0" text="Iniciar sessio" />
+      <TextField fx:id="usuariLogin" layoutX="166.0" layoutY="89.0" promptText="Nom D'usuari" />
+      <TextField fx:id="contrasenyaLogin" layoutX="166.0" layoutY="138.0" promptText="Contrasenya" />
+      <Button fx:id="botoLogin" layoutX="200.0" layoutY="191.0" mnemonicParsing="false" onAction="#login" text="Inciar Sessio" />
+      <Label layoutX="207.0" layoutY="39.0" text="Iniciar sessio" />
       <Label fx:id="errorLogin" layoutX="579.0" layoutY="507.0" prefHeight="37.0" prefWidth="126.0" />
-      <Button fx:id="botoRegistrar" layoutX="729.0" layoutY="444.0" mnemonicParsing="false" onAction="#registrar" text="Registrar" />
+      <Button fx:id="botoRegistrar" layoutX="209.0" layoutY="234.0" mnemonicParsing="false" onAction="#registrar" text="Registrar" />
    </children>
 </AnchorPane>

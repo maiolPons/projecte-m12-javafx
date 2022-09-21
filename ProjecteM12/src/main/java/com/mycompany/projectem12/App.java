@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 /**
  * JavaFX App
@@ -20,7 +22,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("Login"), 1280, 720);
+        scene = new Scene(loadFXML("Login"),1280,720);
         stage.setScene(scene);
         stage.show();
     }
@@ -37,7 +39,6 @@ public class App extends Application {
     public static DataBaseConnection connection = new DataBaseConnection();
     public static void main(String[] args) {
         connection.createConnection();
-
         launch();
     }
 

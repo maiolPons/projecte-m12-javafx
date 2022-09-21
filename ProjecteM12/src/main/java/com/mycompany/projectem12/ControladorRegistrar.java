@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 public class ControladorRegistrar {
     //atributs
@@ -27,6 +28,8 @@ public class ControladorRegistrar {
     private TextField correuRegistrar;
     @FXML
     private TextField contrasenyaRegistrar;
+    @FXML
+    private ImageView backButtonRegistrar;
     //get and set
 
     public Label getErrorRegistrar() {
@@ -75,5 +78,8 @@ public class ControladorRegistrar {
             errorRegistrar.setText("Error amb el registre de usuari!");
         }
     }
-    
+    @FXML
+    private void tornarALogin() throws IOException{
+        App.setRoot("Login");
+    }
 }

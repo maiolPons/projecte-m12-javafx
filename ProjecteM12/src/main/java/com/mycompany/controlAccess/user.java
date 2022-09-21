@@ -5,6 +5,7 @@
 package com.mycompany.controlAccess;
 
 import static com.mycompany.projectem12.App.connection;
+import static com.mycompany.projectem12.App.usuari;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -142,6 +143,7 @@ public class user {
     
     
     //Metodes
+    //logejar usuari
     public void login(String nomUsuari, String contrasenya) throws UnsupportedEncodingException{
         String contrasenyaEncryptada=encriptarMD5(contrasenya);
         Statement stmt = connection.getStmt();
@@ -159,7 +161,7 @@ public class user {
                 System.out.println(rs.getString("validat"));
                 if(rs.getString("validat")!=null){
                     System.out.println("usuari existenix");
-                    rs.getString("nom");
+                    
                     setDni(rs.getString("dni"));
                     setNom(rs.getString("nom"));
                     setCognom(rs.getString("cognoms"));
@@ -200,6 +202,20 @@ public class user {
             Logger.getLogger(user.class.getName()).log(Level.SEVERE, null, ex);
         }
         return funciona;
+    }
+    //tancar sessio
+    public void tancarSessio(){
+        usuari.setAdmin(false);
+        usuari.setCognom(null);
+        usuari.setContrasenya(null);
+        usuari.setDni(null);
+        usuari.setEmail(null);
+        usuari.setLogged(false);
+        usuari.setNacionalitat(null);
+        usuari.setNom(null);
+        usuari.setNomUsuari(null);
+        usuari.setTelefon(null);
+        usuari.setValidat(false);
     }
     
     //Encriptar contrasenya per fer la comprovacio del login
