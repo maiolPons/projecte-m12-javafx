@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="backgroundmenu" stylesheets="@../../../styles/menuStyles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.projectem12.ControladorMenuAdmin">
+   <children>
+      <Label fx:id="errorLogin" layoutX="579.0" layoutY="507.0" prefHeight="37.0" prefWidth="126.0" />
+      <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="475.0" styleClass="barraMenu" stylesheets="@../../../styles/menuStyles.css">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+         <buttons>
+            <Button fx:id="Recepcionistes" mnemonicParsing="false" onAction="#obrirRecepcionistes" text="Recepcionistes" />
+            <Button mnemonicParsing="false" text="Habitacions" />
+            <Button mnemonicParsing="false" text="Reservas" />
+            <Button fx:id="tancarSessioButton" mnemonicParsing="false" onAction="#tancarSessio" text="Tancar sessio" />
+            <Button fx:id="Recepcionistes1" layoutX="30.0" layoutY="19.0" mnemonicParsing="false" onAction="#obrirRecepcionistes" text="Recepcionistes" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="805.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="475.0" styleClass="barraMenu" stylesheets="@../../../styles/menuStyles.css">
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+         <buttons>
+            <Label fx:id="nomUsuariLabel" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="241.0" text="nomUsuari" />
+            <Label text="Benvingut usuari: " />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="475.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="330.0" styleClass="barraMenu" stylesheets="@../../../styles/menuStyles.css">
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </ButtonBar>
+   </children>
+</AnchorPane>
